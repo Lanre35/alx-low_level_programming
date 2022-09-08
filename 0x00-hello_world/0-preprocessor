@@ -1,0 +1,10 @@
+#!/bin/bash
+c/$CFILE
+
+#include <stdio.h>
+
+int main() {
+
+	return(0)
+}
+

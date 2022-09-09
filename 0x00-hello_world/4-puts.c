@@ -2,7 +2,6 @@
 
 /**
  * main - print the string in the function
- *
  * Description: using the main function
  * this program prints "programming is like building a multillingual puzzle"
  * Return: 0

@@ -4,7 +4,7 @@
  * main -Entry point
  *
  * Description: using the main function
- * this program prints "programming is like building a multilingual puzzle"
+ * this program prints "with proper grammer,but the outcome is a place of art,"
  * Return: 0
  */
 int main(void)

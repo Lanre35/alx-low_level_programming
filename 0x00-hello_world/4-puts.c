@@ -3,11 +3,11 @@
 /**
  * main - Entry point
  *
- * Description: "programing is like building a multillingual puzzle
+ * Description: "Programing is like building a multillingual puzzle
  * Return: 0
  */
 int main(void)
 {
-	puts("programing is like building a multillingual puzzle");
+	puts("\"Programing is like building a multillingual puzzle);
 	return (0);
 }

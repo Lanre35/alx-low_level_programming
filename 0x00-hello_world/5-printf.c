@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Descripion: using the main function
+ * Descripion: using the main function to print
  * this program prints "Programming is like building a multilingual puzzle"
  * Return: 0
  */

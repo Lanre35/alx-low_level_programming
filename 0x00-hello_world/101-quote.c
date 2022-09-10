@@ -3,6 +3,9 @@
 
 /**
  * main - Entry point
+ *
+ * Descripion: using the main function
+ * and that of place and that of art is useful" - Dora karpar,2019"
  * Return: 1
  */
 int main(void)

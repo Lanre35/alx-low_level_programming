@@ -26,9 +26,9 @@ int main(void)
 					putchar(' ');
 				}
 			}
-			p++
+			p++;
 		}
-		d++
+		d++;
 	}
 	putchar('\n');
 }

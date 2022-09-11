@@ -9,26 +9,25 @@
  */
 int main(void)
 {
-	int d = 0, p;
-
-	while (d <= 9)
+	int n1 = 0, n2;
+	while (n1 <= 9)
 	{
-		p = 0;
-		while (p <= 9)
-		{
-			if (d != p && d < p)
+		n2 = 0;
+		while ( n2 <=9){
+			if (n1 != n2 && n1 < n2)
 			{
-				putchar(d + 48);
-				putchar(p + 48);
-				if (d + p != 17)
+				putchar(n1 + 48);
+				putchar(n2 + 48);
+				if (n1 + n2 != 17)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			p++;
+			n2++
 		}
-		d++;
+		n1++
 	}
 	putchar('\n');
+	return (0)
 }

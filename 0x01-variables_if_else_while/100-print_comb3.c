@@ -5,29 +5,26 @@
 /**
  * main - Entry point
  *
+ * Description: It prints all possible different comibination of tow digits
+ * seperated by comma and space
  * Return: 0
  */
 int main(void)
 {
-	int n1 = 0, n2;
-	while (n1 <= 9)
+	int n1, n2;
+
+	for (n1 = 0; n1 <= 8; n1++)
 	{
-		n2 = 0;
-		while ( n2 <=9){
-			if (n1 != n2 && n1 < n2)
-			{
-				putchar(n1 + 48);
-				putchar(n2 + 48);
-				if (n1 + n2 != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			n2++
+		for (n2 = n1 + 1; n2 <= 9; n2++)
+		{
+			putchar((n1 % 10) + '0');
+			putchar((n2 % 10) + '0');
+			if (n1 == 8 && n2 == 9)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
-		n1++
 	}
 	putchar('\n');
-	return (0)
+	return (0);
 }

@@ -10,8 +10,7 @@
  */
 int main(void)
 {
-	fwrite(STDOUT_FILENO, "and that piece of art is useful
-			\" - Dora korper, 2015-10-2019\n", 59);
+	write(2, "and that piece of art is useful - Dora korper, 2015-10-2019\n", 59);
 	return (1);
 }
 

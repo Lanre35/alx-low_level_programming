@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_sign - function to check for a sign of a number
- * @c: Is the int that will use for the argument of the function
- * Return: 0
+ * print_sign - prints the sign of a number
+ * @c: positive, zero or negative integer
+ * Return: 1 if it is positive, 0 if it's negative
  */
 int print_sign(int n)
 {
@@ -22,4 +22,4 @@ int print_sign(int n)
 		_putchar('0');
 		return (0);
 	}
-}
+}		

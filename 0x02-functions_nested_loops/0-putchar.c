@@ -1,12 +1,10 @@
 #include "main.h"
-
 /**
- * main - Entry point
+ * main - entry point
  *
- * Description: A program that prints _putchar
- * Return: 0 
+ * Description: print out _putchar
+ * Return: 0 when successful
  */
-int main(void)
 {
 	_putchar('_');
 	_putchar('p');
@@ -20,5 +18,3 @@ int main(void)
 
 	return (0);
 }
-
-

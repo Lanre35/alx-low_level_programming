@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Return: 0
+ * print_alphabet - check description
+ * Description: It prints the alphabe in lowercase followed by a new line
+ * Return: Nothing
  */
 void print_alphabet(void)
 {

@@ -10,6 +10,8 @@ int _isupper(int c)
 	if ((c >= 'A') && (c <= 'Z'))
 	{
 		return (1);
+		printf("%c: %d\n", c, _isupper(c));
 	}
+	printf("%c: %d\n", c, _isupper(c));
 	return (0);
 }

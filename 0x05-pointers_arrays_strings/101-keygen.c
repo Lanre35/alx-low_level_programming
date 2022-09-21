@@ -33,7 +33,7 @@ int main(void)
 				{
 					password[index] -= diff_half1;
 					break;
-				}		
+				}
 			}
 			for (index = 0; password[index]; index++)
 			{

@@ -9,10 +9,10 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *aux = dest;
+	char *dest = src;
 
-	while (*src)
-		*dest++ = *src++;
+	while (*dest)
+		*src++ = *dest++;
 
-	return (aux);
+	return (dest);
 }

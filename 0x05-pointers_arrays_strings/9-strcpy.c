@@ -7,14 +7,12 @@
  * @src: The source string to copy.
  * Return: A pointer to the destination string @dest.
  */
-char *strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
-	int index = 0;
+	char *aux = dest;
 
-	while (src[index])
-	{
-		dest[index] = src[index];
-		index++;
-	}
+	while (*src)
+		*dest++ = *src++;
+
 	return (dest);
 }

@@ -1,38 +1,33 @@
 #include "main.h"
 
-int check_seperators(char c);
 /**
- * cap_string - a function that capitalizes alet
- * words of a string.
- * @s: An input string to capitalize letters
- * Return: pointer to s
+ * cap_string - capitalizes chars in a string following a separator
+ * @c: character string pointer
+ * Return: char pointer
  */
-char *cap_string(char *s)
+char *cap_string(char *c)
 {
-	int i = 0;
+	int i = 0, j,
 
-	while (s[i])
+	sep[] = {32, '\t', 11,  '\n', 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	if (c[0] > 96 && c[0] < 123)
+		c[0] -= 32;
+	while (c[i] != '\0')
 	{
-		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
-			s[i] -= 32;
-		if (check_seperators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
-			s[i + 1] -= 32;
+		if (c[i] > 96 && c[i] < 123)
+		{
+			j = 0;
+			while (j < 14)
+			{
+				if (c[i - 1] == sep[j])
+				{
+					c[i] -= 32;
+					break;
+				}
+				j++;
+			}
+		}
 		i++;
 	}
-	return (s);
-}
-int check_seperators(char c)
-{
-	int i = 0;
-
-	char seperators[13] = {
-		' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'
-	};
-
-	for (; i < 13; i++)
-	{
-		if (c == seperators[i])
-			return (1);
-	}
-	return (0);
+	return (c);
 }

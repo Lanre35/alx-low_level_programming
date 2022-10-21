@@ -13,7 +13,9 @@ size_t print_list(const list_t *h)
 * t = temporary pointer
 */
 	const list_t *t;
+
 	size_t i;
+
 	t = h;
 	for (i = 0; t != NULL; i++)
 	{

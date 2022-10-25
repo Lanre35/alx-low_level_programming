@@ -35,6 +35,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			return (NULL);
 	}
 	prev = (*head), sigu = prev->next;
+
 	if (idx == 0)
 	{
 		new->next = prev, (*head) = new;
@@ -49,11 +50,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		new->next = sigu;
 		prev->next = new;
-	}
-	else
-	{
-		free(new);
-		return (NULL);
 	}
 	return (new);
 }

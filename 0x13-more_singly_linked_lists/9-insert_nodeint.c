@@ -2,54 +2,40 @@
 
 
 /**
- * insert_nodeint_at_index - returns the nth node of a listint_t linked list
- * @head: Its a pointer to the address of the head pinter
- * @idx: is the index of the list where the new node should be added.
- * Index starts at 0
- * @n: Its the node data (n -> int)
- * Return: the address of the new node, or NULL if it failed
+ * insert_nodeint_at_index - Inserts a new node to a listint_t
+ * list at a given position.
+ * @head: A pointer to the address of the
+ * head of the listint_t list.
+ * @idx: The index of the listint_t list where the new
+ * node should be added - indices start at 0.
+ * @n: The integer for the new node to contain.
+ * Return: If the function fails - NULL.
+ * Otherwise - the address of the new node.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *prev;
+	listint_t *new, *copy = *head;
 
-	listint_t *sigu;
-
-	listint_t *new;
-
-	unsigned int i;
+	unsigned int node;
 
 	new = malloc(sizeof(listint_t));
 
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-	if (*head == NULL)
-	{
-		if (idx == 0)
-		{
-			(*head) = new, new->next = NULL;
-			return (*head);
-		}
-		else
-			return (NULL);
-	}
-	prev = (*head), sigu = prev->next;
-
 	if (idx == 0)
 	{
-		new->next = prev, (*head) = new;
-		return (*head);
+		new->next = copy;
+		*head = new;
+		return (new);
 	}
-	for (i = 1; i < idx && sigu != NULL; i++)
+	for (node = 0; node < (idx - 1); node++)
 	{
-		prev = sigu;
-		sigu = sigu->next;
+		if (copy == NULL || copy->next == NULL)
+			return (NULL);
+		copy = copy->next;
 	}
-	if (i == idx)
-	{
-		new->next = sigu;
-		prev->next = new;
-	}
+	new->next = copy->next;
+	copy->next = new;
 	return (new);
 }
